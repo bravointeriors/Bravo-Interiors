@@ -53,13 +53,13 @@ const handleSubmit = async (e) => {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur border-b border-red-600">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur border-b border-white">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-4">
             <img
               src="/logo.png"
               alt="Bravo Interiors Logo"
-              className="h-20 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
             <div>
               
@@ -78,7 +78,7 @@ const handleSubmit = async (e) => {
 
           <a
             href="#contact"
-            className="bg-white hover:bg-red-600 transition text-black font-semibold px-5 py-3 rounded-xl shadow-lg"
+            className="bg-white hover:bg-gray-400 transition text-black font-semibold px-5 py-3 rounded-xl shadow-lg"
           >
             Get Quote
           </a>
@@ -97,7 +97,7 @@ const handleSubmit = async (e) => {
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative z-10 text-center max-w-4xl px-6">
-          <p className="text-red-600 uppercase tracking-[0.5em] mb-4 text-sm">
+          <p className="text-white uppercase tracking-[0.5em] mb-4 text-sm">
             Perth Premium Flooring Specialists
           </p>
 
@@ -114,14 +114,14 @@ const handleSubmit = async (e) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#calculator"
-              className="bg-white hover:bg-red-600 text-black px-8 py-4 rounded-2xl font-semibold shadow-2xl transition"
+              className="bg-white hover:bg-gray-400 text-black px-8 py-4 rounded-2xl font-semibold shadow-2xl transition"
             >
               Estimate Your Project
             </a>
 
             <a
               href="#gallery"
-              className="border border-white text-white hover:bg-red-600 hover:text-black px-8 py-4 rounded-2xl transition"
+              className="border border-white text-white hover:bg-gray-400 hover:text-black px-8 py-4 rounded-2xl transition"
             >
               View Projects
             </a>
@@ -130,25 +130,25 @@ const handleSubmit = async (e) => {
       </section>
 
       {/* TRUST BAR */}
-      <section className="bg-black text-white py-8 border-t border-red-600 border-b">
+      <section className="bg-black text-white py-8 border-t border-white border-b">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6 px-6 text-center">
           <div>
-            <h3 className="text-red-600 font-bold text-lg">High Quality</h3>
+            <h3 className="text-white font-bold text-lg">High Quality</h3>
             <p className="text-gray-400">Premium workmanship</p>
           </div>
 
           <div>
-            <h3 className="text-red-600 font-bold text-lg">Reliable</h3>
+            <h3 className="text-white font-bold text-lg">Reliable</h3>
             <p className="text-gray-400">Professional service</p>
           </div>
 
           <div>
-            <h3 className="text-red-600 font-bold text-lg">On Time</h3>
+            <h3 className="text-white font-bold text-lg">On Time</h3>
             <p className="text-gray-400">Every project delivered fast</p>
           </div>
 
           <div>
-            <h3 className="text-red-600 font-bold text-lg">Attention To Detail</h3>
+            <h3 className="text-white font-bold text-lg">Attention To Detail</h3>
             <p className="text-gray-400">Luxury finish guaranteed</p>
           </div>
         </div>
@@ -181,26 +181,26 @@ const handleSubmit = async (e) => {
               </p>
             </div>
 
-            <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
-              <div className="text-red-600 text-5xl mb-6">▤</div>
-              <h3 className="text-2xl font-bold mb-4">Hybrid Flooring</h3>
-              <p className="text-gray-600">Coming soon.</p>
-            </div>
-
-            <div className="bg-gray-100 p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300">
+            <div className="bg-black text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300">
               <div className="text-red-600 text-5xl mb-6">▥</div>
               <h3 className="text-2xl font-bold mb-4">Skirting Boards</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 Precision skirting board installation with premium detailing.
               </p>
             </div>
 
-            <div className="bg-gray-100 p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300">
+            <div className="bg-black text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300">
               <div className="text-red-600 text-5xl mb-6">▦</div>
               <h3 className="text-2xl font-bold mb-4">Door Installation</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 Internal door installations, locks, handles and fit-outs.
               </p>
+            </div>
+
+            <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
+              <div className="text-red-600 text-5xl mb-6">▤</div>
+              <h3 className="text-2xl font-bold mb-4">Hybrid Flooring</h3>
+              <p className="text-gray-600">Coming soon.</p>
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ const handleSubmit = async (e) => {
 
           <a
             href="#contact"
-            className="bg-white hover:bg-red-600 text-black px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl transition"
+            className="bg-white hover:bg-gray-400 text-black px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl transition"
           >
             Request Free Quote
           </a>
