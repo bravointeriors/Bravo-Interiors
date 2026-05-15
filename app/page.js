@@ -5,7 +5,7 @@ import PricingCalculator from "./PricingCalculator";
 
 export default function BravoInteriorsWebsite() {
 
-  const [name, setName] = useState("");
+const [name, setName] = useState("");
 const [phone, setPhone] = useState("");
 const [email, setEmail] = useState("");
 const [address, setAddress] = useState("");

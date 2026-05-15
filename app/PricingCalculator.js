@@ -22,6 +22,13 @@ export default function PricingCalculator() {
 
   const [result, setResult] = useState(null);
 
+  const [showCustomerForm, setShowCustomerForm] = useState(false);
+
+  const [customerName, setCustomerName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [suburb, setSuburb] = useState("");
+
   // =========================
   // ADD SERVICE
   // =========================
@@ -141,51 +148,146 @@ export default function PricingCalculator() {
       }
     });
 
-    setResult({
-      low: lowTotal.toFixed(0),
-      high: highTotal.toFixed(0),
+      setResult({
+        low: lowTotal.toFixed(0),
+        high: highTotal.toFixed(0),
+      });
+    };
+
+    const submitLead = async () => {
+
+  // VALIDATION
+  if (
+    !customerName ||
+    !phone ||
+    !email ||
+    !suburb
+  ) {
+    alert("Please complete all fields.");
+    return;
+  }
+
+  // CALCULATE INTERNALLY
+  calculatePrice();
+
+  try {
+
+    const response = await fetch("/api/send", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        customerName,
+        phone,
+        email,
+        suburb,
+        services,
+        sqm,
+        skirtingLm,
+        doors,
+      }),
     });
-  };
+
+    if (response.ok) {
+
+      setResult(true);
+
+    } else {
+
+      alert("Something went wrong.");
+
+    }
+
+  } catch (error) {
+
+    console.error(error);
+    alert("Server error.");
+
+  }
+};
 
   return (
-    <section
-      id="calculator"
-      className="py-28 bg-black text-white"
-    >
-      <div className="max-w-5xl mx-auto px-6">
+  <section
+    id="calculator"
+    className="py-28 bg-black text-white"
+  >
+    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
 
-        {/* HEADER */}
-        <div className="text-center mb-16">
-          <p className="text-yellow-500 uppercase tracking-[0.3em] text-sm mb-4">
-            Instant Estimate
-          </p>
+      {/* LEFT SIDE */}
+      <div>
 
-          <h2 className="text-5xl font-bold mb-6">
-            Detailed Pricing Calculator
-          </h2>
+        <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
+          Free Estimate
+        </p>
 
-          <p className="text-gray-400 text-lg">
-            Add one or multiple services to
-            generate an estimate instantly.
-          </p>
+        <h2 className="text-5xl font-bold leading-tight">
+          Premium Interior &
+          Flooring Solutions
+        </h2>
+
+        <p className="text-gray-400 text-lg mt-6 leading-relaxed">
+          Get a professional project estimate tailored to your property.
+          Our team will review your project and contact you with pricing,
+          recommendations, and availability.
+        </p>
+
+        <div className="mt-10 space-y-4 text-gray-300">
+
+          <div className="flex items-center gap-3">
+            <span>✔</span>
+            <span>Residential & Commercial</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span>✔</span>
+            <span>Fast Turnaround Times</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span>✔</span>
+            <span>Professional Installation Team</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span>✔</span>
+            <span>Premium Materials Available</span>
+          </div>
+
         </div>
 
-        {/* CARD */}
-        <div className="bg-white text-black rounded-3xl p-10 shadow-2xl">
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex justify-center lg:justify-end">
+
+        {/* FLOATING CARD */}
+        <div className="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+
+          <h3 className="text-3xl font-bold mb-2">
+            Get Your Estimate
+          </h3>
+
+          <p className="text-gray-300 mb-8">
+            Complete the form below and our team will contact you shortly.
+          </p>
 
           {/* SERVICES */}
-          <div className="space-y-10">
+          {!showCustomerForm && (
+          <div className="space-y-8">
 
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="border rounded-3xl p-6"
+                className="bg-white text-black rounded-3xl p-6"
               >
 
                 {/* TOP */}
                 <div className="flex justify-between items-center mb-6">
 
-                  <h3 className="text-2xl font-bold">
+                  <h3 className="text-xl font-bold">
                     Service {index + 1}
                   </h3>
 
@@ -228,6 +330,7 @@ export default function PricingCalculator() {
                     <option value="doors">
                       Door Installation
                     </option>
+
                   </select>
 
                 </div>
@@ -275,8 +378,7 @@ export default function PricingCalculator() {
                         }
                       />
 
-                      Floor Levelling &
-                      Screeding
+                      Floor Levelling & Screeding
                     </label>
 
                     <label className="flex items-center gap-3">
@@ -398,45 +500,139 @@ export default function PricingCalculator() {
             ))}
 
           </div>
+          )}
+                    
+          {/* CUSTOMER INFO */}
+          {showCustomerForm && (
+          <div className="mt-10 bg-white text-black rounded-3xl p-6">
+
+            <h3 className="text-2xl font-bold mb-6">
+              Your Details
+            </h3>
+
+            <div className="space-y-5">
+
+              {/* NAME */}
+              <div>
+                <label className="block mb-2 font-semibold">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  value={customerName}
+                  onChange={(e) =>
+                    setCustomerName(e.target.value)
+                  }
+                  placeholder="John Smith"
+                  className="w-full border border-gray-300 rounded-2xl p-4"
+                />
+              </div>
+
+              {/* PHONE */}
+              <div>
+                <label className="block mb-2 font-semibold">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  value={phone}
+                  onChange={(e) =>
+                    setPhone(e.target.value)
+                  }
+                  placeholder="0412 345 678"
+                  className="w-full border border-gray-300 rounded-2xl p-4"
+                />
+              </div>
+
+              {/* EMAIL */}
+              <div>
+                <label className="block mb-2 font-semibold">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) =>
+                    setEmail(e.target.value)
+                  }
+                  placeholder="john@email.com"
+                  className="w-full border border-gray-300 rounded-2xl p-4"
+                />
+              </div>
+
+              {/* SUBURB */}
+              <div>
+                <label className="block mb-2 font-semibold">
+                  Suburb
+                </label>
+
+                <input
+                  type="text"
+                  value={suburb}
+                  onChange={(e) =>
+                    setSuburb(e.target.value)
+                  }
+                  placeholder="Perth"
+                  className="w-full border border-gray-300 rounded-2xl p-4"
+                />
+              </div>
+            </div>
+            {/* SUBMIT BUTTON */}
+            <button
+              onClick={submitLead}
+              className="w-full mt-8 bg-yellow-500 hover:bg-yellow-400 text-black py-5 rounded-2xl font-bold text-lg transition"
+            >
+              Submit Request
+            </button>
+          </div>
+          )}
 
           {/* ADD BUTTON */}
+          {!showCustomerForm && (
           <button
             onClick={addService}
-            className="w-full mt-8 border-2 border-dashed border-gray-400 py-4 rounded-2xl font-bold hover:bg-gray-100 transition"
+            className="w-full mt-8 border border-white/30 py-4 rounded-2xl font-bold hover:bg-white/10 transition"
           >
             + Add Another Service
           </button>
-
-          {/* CALCULATE */}
+          )}
+          {/* SHOW ESTIMATE BUTTON */}
+          {!showCustomerForm && (
           <button
-            onClick={calculatePrice}
+            onClick={() => setShowCustomerForm(true)}
             className="w-full mt-8 bg-yellow-500 hover:bg-yellow-400 text-black py-5 rounded-2xl font-bold text-lg transition"
           >
-            Calculate Estimate
+            Continue
           </button>
-
-          {/* RESULT */}
-          {result && (
-            <div className="mt-10 bg-gray-100 rounded-3xl p-8 text-center">
-
-              <p className="text-gray-500 mb-3">
-                Estimated Project Range
-              </p>
-
-              <h3 className="text-5xl font-bold">
-                ${result.low} – ${result.high}
-              </h3>
-
-              <p className="text-gray-500 mt-4">
-                Final pricing subject to
-                on-site inspection.
-              </p>
-
-            </div>
           )}
+          {/* SUCCESS MESSAGE */}
+{result && (
+  <div className="mt-10 bg-green-500/10 border border-green-500/30 rounded-3xl p-8 text-center">
+
+    <div className="text-5xl mb-4">
+      ✓
+    </div>
+
+    <h3 className="text-3xl font-bold mb-4 text-white">
+      Request Submitted Successfully
+    </h3>
+
+    <p className="text-gray-300 text-lg leading-relaxed">
+      Thank you for contacting Bravo Interiors.
+      <br /><br />
+      Your project request has been received and
+      our team will email you your estimate shortly.
+    </p>
+
+  </div>
+)}
 
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }
