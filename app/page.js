@@ -10,6 +10,7 @@ const [phone, setPhone] = useState("");
 const [email, setEmail] = useState("");
 const [address, setAddress] = useState("");
 const [message, setMessage] = useState("");
+const [menuOpen, setMenuOpen] = useState(false);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -66,9 +67,17 @@ const handleSubmit = async (e) => {
           <nav className="hidden md:flex items-center gap-8 text-white">
             <a href="#services" className="hover:text-orange-400 transition">Services</a>
             <a href="#calculator" className="hover:text-orange-400 transition">Pricing</a>
-            <a href="#gallery" className="hover:text-orange-400 transition">Projects</a>
+            <a href="/reviews" className="hover:text-orange-400 transition">Reviews</a>
+            <a href="/policies" className="hover:text-orange-400 transition">Policy</a>
             <a href="#contact" className="hover:text-orange-400 transition">Contact</a>
           </nav>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-white text-3xl"
+          >
+            ☰
+          </button>
 
           <a
             href="#contact"
@@ -77,6 +86,15 @@ const handleSubmit = async (e) => {
             Get Quote
           </a>
         </div>
+        {menuOpen && (
+        <div className="md:hidden bg-black border-t border-white/10 px-6 py-6 space-y-4 text-white">
+          <a href="#services" onClick={() => setMenuOpen(false)} className="block">Services</a>
+          <a href="#calculator" onClick={() => setMenuOpen(false)} className="block">Pricing</a>
+          <a href="/reviews" className="block">Reviews</a>
+          <a href="/policies" className="block">Maintenance Policy</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)} className="block">Contact</a>
+        </div>
+      )}
       </header>
 
       {/* HERO */}
@@ -318,6 +336,40 @@ const handleSubmit = async (e) => {
         </div>
       </section>
 
+      {/*Testimonials*/}
+      <section className="py-24 bg-gray-100">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-4">
+      Testimonials
+    </p>
+
+    <h2 className="text-5xl font-bold mb-12">
+      Trusted by Perth Clients
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        "Professional service and high-quality finish.",
+        "Reliable, clean, and completed the job on time.",
+        "Excellent attention to detail from start to finish.",
+      ].map((text, index) => (
+        <div key={index} className="bg-white p-8 rounded-3xl shadow-lg">
+          <div className="text-orange-400 text-2xl mb-4">★★★★★</div>
+          <p className="text-gray-700 mb-6">“{text}”</p>
+          <p className="font-bold">Bravo Interiors Client</p>
+        </div>
+      ))}
+    </div>
+
+    <a
+      href="/reviews"
+      className="inline-block mt-10 bg-black text-white px-8 py-4 rounded-2xl font-bold hover:bg-zinc-800 transition"
+    >
+      View All Reviews
+    </a>
+  </div>
+</section>
+
       {/* CONTACT */}
       <section id="contact" className="py-28 bg-white">
         <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
@@ -393,8 +445,10 @@ const handleSubmit = async (e) => {
 
       {/* FOOTER */}
       <footer className="bg-black text-gray-400 py-3 text-center border-t border-yellow-600">
+
         {/* TRUST BADGES */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-2 mb-2 text-white/80 text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-2 mb-4 text-white/80 text-sm">
+
           <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-6 py-2 rounded-full">
             <span className="text-orange-400">✔</span>
             Fully Insured
@@ -409,8 +463,26 @@ const handleSubmit = async (e) => {
             <span className="text-orange-400">✔</span>
             Perth Based
           </div>
+
         </div>
-        <p>© 2026 Bravo Interiors. All Rights Reserved.</p>
+
+        {/* POLICY LINKS */}
+        <div className="flex justify-center gap-6 mb-4 text-sm">
+
+          <a
+            href="/policies"
+            className="hover:text-white transition"
+          >
+            Maintenance & Defects Policy
+          </a>
+
+        </div>
+
+        {/* COPYRIGHT */}
+        <p>
+          © 2026 Bravo Interiors. All Rights Reserved.
+        </p>
+
       </footer>
     </div>
   );
