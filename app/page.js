@@ -54,12 +54,12 @@ const handleSubmit = async (e) => {
     <div className="min-h-screen bg-white text-black font-sans">
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur border-b border-black">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-2 py-5">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-1 py-2">
           <div className="flex items-center">
             <img
-              src="/BravoInteriors.PNG"
+              src="/BravoInteriors1.PNG"
               alt="Bravo Interiors"
-              className="h-14 w-auto object-contain scale-[5.5] translate-y-[18px]"
+              className="h-18 w-auto object-contain"
             />
           </div>
 
