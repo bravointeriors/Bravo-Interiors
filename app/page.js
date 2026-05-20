@@ -223,7 +223,7 @@ const handleSubmit = async (e) => {
             </div>
 
             <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
-                  style={{ backgroundImage: "url('/bg_BathroomAccessories.JPG')" }}>
+                  style={{ backgroundImage: "url('/bg_BathroomAccessories.png')" }}>
               <div className="text-orange-400 text-5xl mb-6">▦</div>
               <h3 className="text-2xl font-bold mb-4">Bathroom Accessories</h3>
               <p className="text-gray-200 leading-relaxed">
