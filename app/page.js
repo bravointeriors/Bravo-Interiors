@@ -57,7 +57,7 @@ const handleSubmit = async (e) => {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-2 py-5">
           <div className="flex items-center">
             <img
-              src="/logo_BravoInteriors.png"
+              src="/logo_BravoInteriors.PNG"
               alt="Bravo Interiors"
               className="h-14 w-auto object-contain scale-550 translate-y-4.5"
             />
