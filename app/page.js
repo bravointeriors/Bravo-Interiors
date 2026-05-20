@@ -59,7 +59,7 @@ const handleSubmit = async (e) => {
             <img
               src="/logo_BravoInteriors.PNG"
               alt="Bravo Interiors"
-              className="h-14 w-auto object-contain scale-550 translate-y-4.5"
+              className="h-14 w-auto object-contain scale-[5.5] translate-y-[18px]"
             />
           </div>
 
