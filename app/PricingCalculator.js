@@ -224,7 +224,7 @@ export default function PricingCalculator() {
         </p>
 
         <h2 className="text-5xl font-bold leading-tight">
-          Premium Interior &
+          Interior &
           Flooring Solutions
         </h2>
 
@@ -603,7 +603,7 @@ export default function PricingCalculator() {
           {!showCustomerForm && (
           <button
             onClick={() => setShowCustomerForm(true)}
-            className="w-full mt-8 bg-yellow-500 hover:bg-yellow-400 text-black py-5 rounded-2xl font-bold text-lg transition"
+            className="w-full mt-8 bg-orange-400 hover:bg-orange-400 text-black py-5 rounded-2xl font-bold text-lg transition"
           >
             Continue
           </button>

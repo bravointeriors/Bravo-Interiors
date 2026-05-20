@@ -53,32 +53,26 @@ const handleSubmit = async (e) => {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur border-b border-white">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-4">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur border-b border-black">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-2 py-5">
+          <div className="flex items-center">
             <img
-              src="/logo.png"
-              alt="Bravo Interiors Logo"
-              className="h-16 w-auto object-contain"
+              src="/logo_BravoInteriors.png"
+              alt="Bravo Interiors"
+              className="h-14 w-auto object-contain scale-550 translate-y-4.5"
             />
-            <div>
-              
-              <p className="text-red-500 text-sm tracking-[0.3em] uppercase">
-                Premium Interior Services
-              </p>
-            </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-8 text-white">
-            <a href="#services" className="hover:text-red-600 transition">Services</a>
-            <a href="#calculator" className="hover:text-red-600 transition">Pricing</a>
-            <a href="#gallery" className="hover:text-red-600 transition">Projects</a>
-            <a href="#contact" className="hover:text-red-600 transition">Contact</a>
+            <a href="#services" className="hover:text-orange-400 transition">Services</a>
+            <a href="#calculator" className="hover:text-orange-400 transition">Pricing</a>
+            <a href="#gallery" className="hover:text-orange-400 transition">Projects</a>
+            <a href="#contact" className="hover:text-orange-400 transition">Contact</a>
           </nav>
 
           <a
             href="#contact"
-            className="bg-white hover:bg-gray-400 transition text-black font-semibold px-5 py-3 rounded-xl shadow-lg"
+            className="bg-orange-400 hover:bg-orange-300 transition text-black font-semibold px-5 py-3 rounded-xl shadow-lg"
           >
             Get Quote
           </a>
@@ -98,30 +92,34 @@ const handleSubmit = async (e) => {
 
         <div className="relative z-10 text-center max-w-4xl px-6">
           <p className="text-white uppercase tracking-[0.5em] mb-4 text-sm">
-            Perth Premium Flooring Specialists
+            Perth Flooring & Interiors Services
           </p>
 
           <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-            Luxury Vinyl Flooring & Interior Fit-Outs
+            Flooring Solutions & Interior Fit-Outs
           </h2>
 
           <p className="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed">
-            High-end vinyl flooring installations, skirting boards,
-            carpentry, door installations and complete interior finishing
-            services across Perth.
+            At Bravo Interiors, we deliver professional flooring, carpentry, and interior 
+            finishing services for residential and commercial projects across Perth. 
+            We specialise in floor preparation and installation, vinyl flooring, carpet tiles, 
+            skirting boards, door fit-outs, and detailed finishing works including caulking and bathroom accessories. 
+            We work closely with builders and site supervisors to deliver reliable, high-quality results on time 
+            and to specification.
           </p>
 
+          {/* CTA BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#calculator"
-              className="bg-white hover:bg-gray-400 text-black px-8 py-4 rounded-2xl font-semibold shadow-2xl transition"
+              className="bg-white hover:bg-orange-400 text-black px-8 py-4 rounded-2xl font-semibold shadow-2xl transition"
             >
               Estimate Your Project
             </a>
 
             <a
               href="#gallery"
-              className="border border-white text-white hover:bg-gray-400 hover:text-black px-8 py-4 rounded-2xl transition"
+              className="border border-white text-white hover:bg-orange-400 hover:text-black px-8 py-4 rounded-2xl transition"
             >
               View Projects
             </a>
@@ -133,22 +131,22 @@ const handleSubmit = async (e) => {
       <section className="bg-black text-white py-8 border-t border-white border-b">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6 px-6 text-center">
           <div>
-            <h3 className="text-white font-bold text-lg">High Quality</h3>
+            <h3 className="text-orange-400 font-bold text-lg">High Quality</h3>
             <p className="text-gray-400">Premium workmanship</p>
           </div>
 
           <div>
-            <h3 className="text-white font-bold text-lg">Reliable</h3>
+            <h3 className="text-orange-400 font-bold text-lg">Reliable</h3>
             <p className="text-gray-400">Professional service</p>
           </div>
 
           <div>
-            <h3 className="text-white font-bold text-lg">On Time</h3>
+            <h3 className="text-orange-400 font-bold text-lg">On Time</h3>
             <p className="text-gray-400">Every project delivered fast</p>
           </div>
 
           <div>
-            <h3 className="text-white font-bold text-lg">Attention To Detail</h3>
+            <h3 className="text-orange-400 font-bold text-lg">Attention To Detail</h3>
             <p className="text-gray-400">Luxury finish guaranteed</p>
           </div>
         </div>
@@ -158,48 +156,110 @@ const handleSubmit = async (e) => {
       <section id="services" className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
+            <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-6">
               Our Services
             </p>
 
             <h2 className="text-5xl font-bold mb-6">
-              Complete Interior Installation Services
+              Interior Installation Services
             </h2>
 
             <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-              Bravo Interiors is a premium multi-service
-              installation business while specialising in vinyl flooring.
+              Our services include floor preparation and installation of vinyl flooring and carpet tiles, 
+              as well as the removal and disposal of existing flooring materials. 
+              We also specialise in skirting board installation, door fit-outs including handles and locks, 
+              and detailed finishing work such as caulking for a clean, seamless result. In addition, 
+              we install bathroom accessories with accuracy and care to complete the final interior touches.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-black text-white p-8 rounded-3xl shadow-2xl border border-red-600 hover:-translate-y-2 transition duration-300">
-              <div className="text-red-600 text-5xl mb-6">▣</div>
+            <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/bg_VinylPlank.png')" }}>
+              <div className="text-orange-400 text-5xl mb-6">▣</div>
               <h3 className="text-2xl font-bold mb-4">Vinyl Flooring</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed">
                 Premium vinyl plank flooring installation for residential and commercial spaces.
               </p>
             </div>
 
-            <div className="bg-black text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300">
-              <div className="text-red-600 text-5xl mb-6">▥</div>
-              <h3 className="text-2xl font-bold mb-4">Skirting Boards</h3>
+            <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/bg_CarpetTile.png')" }}>
+              <div className="text-orange-400 text-5xl mb-6">▦</div>
+              <h3 className="text-2xl font-bold mb-4">Carpet Tiles</h3>
               <p className="text-gray-300 leading-relaxed">
+                Low maintenance and easy to clean, carpet tiles are durable, stain-resistant, and simple to replace when needed.
+                Their flexible design allows colours, textures, and patterns to be mixed and matched for a unique modern look..
+              </p>
+            </div>
+
+            <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/bg_SkirtingBoards.png')" }}>
+              <div className="text-orange-400 text-5xl mb-6">▥</div>
+              <h3 className="text-2xl font-bold mb-4">Skirting Boards</h3>
+              <p className="text-gray-500 leading-relaxed">
                 Precision skirting board installation with premium detailing.
               </p>
             </div>
 
-            <div className="bg-black text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300">
-              <div className="text-red-600 text-5xl mb-6">▦</div>
-              <h3 className="text-2xl font-bold mb-4">Door Installation</h3>
+            <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/bg_Doors.png')" }}>
+              <div className="text-orange-400 text-5xl mb-6">▦</div>
+              <h3 className="text-2xl font-bold mb-4">Door Fit-out</h3>
               <p className="text-gray-300 leading-relaxed">
                 Internal door installations, locks, handles and fit-outs.
               </p>
             </div>
 
+            <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/bg_floor-levelling.jpeg')" }}>
+              <div className="text-orange-400 text-5xl mb-6">▦</div>
+              <h3 className="text-2xl font-bold mb-4">Floor Solutions and Preperation</h3>
+              <p className="text-gray-100 leading-relaxed">
+                Professional floor preparation services including grinding, levelling, screeding, 
+                and surface correction to ensure a smooth, durable foundation for all flooring installations. 
+                Suitable for residential, commercial, and renovation projects.
+              </p>
+            </div>
+
+            <div className="text-white p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition duration-300 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/bg_BathroomAcc.JPG')" }}>
+              <div className="text-orange-400 text-5xl mb-6">▦</div>
+              <h3 className="text-2xl font-bold mb-4">Bathroom Accessories</h3>
+              <p className="text-gray-200 leading-relaxed">
+                Professional bathroom accessories fit-out services including installation of towel rails, mirrors, 
+                soap holders, toilet roll holders, grab rails, and other fixtures with clean, 
+                precise finishing for residential and commercial spaces.
+              </p>
+            </div>
+
             <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
-              <div className="text-red-600 text-5xl mb-6">▤</div>
+              <div className="text-orange-400 text-5xl mb-6">▤</div>
               <h3 className="text-2xl font-bold mb-4">Hybrid Flooring</h3>
+              <p className="text-gray-600">Coming soon.</p>
+            </div>
+
+            <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
+              <div className="text-orange-400 text-5xl mb-6">▤</div>
+              <h3 className="text-2xl font-bold mb-4">Carpet Flooring</h3>
+              <p className="text-gray-600">Coming soon.</p>
+            </div>
+
+            <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
+              <div className="text-orange-400 text-5xl mb-6">▤</div>
+              <h3 className="text-2xl font-bold mb-4">Vinyl Sheets</h3>
+              <p className="text-gray-600">Coming soon.</p>
+            </div>
+
+            <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
+              <div className="text-orange-400 text-5xl mb-6">▤</div>
+              <h3 className="text-2xl font-bold mb-4">Tiles Removal</h3>
+              <p className="text-gray-600">Coming soon.</p>
+            </div>
+
+            <div className="bg-gray-100 p-8 rounded-3xl opacity-60 grayscale hover:opacity-80 transition">
+              <div className="text-orange-400 text-5xl mb-6">▤</div>
+              <h3 className="text-2xl font-bold mb-4">Carpet Removal</h3>
               <p className="text-gray-600">Coming soon.</p>
             </div>
           </div>
@@ -210,7 +270,7 @@ const handleSubmit = async (e) => {
       <PricingCalculator />
 
       {/* GALLERY */}
-      <section id="gallery" className="py-28 bg-white">
+      <section id="gallery" className="hidden py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
@@ -239,14 +299,14 @@ const handleSubmit = async (e) => {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-gradient-to-r from-black to-zinc-900 text-white text-center">
+      <section className=" hidden py-28 bg-gradient-to-r from-black to-zinc-900 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-5xl font-bold mb-6">
             Ready To Transform Your Space?
           </h2>
 
           <p className="text-gray-300 text-xl mb-10">
-            Premium flooring and interior installation services designed to elevate your property.
+            Professional flooring and interior installation services designed to elevate your property.
           </p>
 
           <a
@@ -332,7 +392,24 @@ const handleSubmit = async (e) => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-black text-gray-400 py-10 text-center border-t border-yellow-600">
+      <footer className="bg-black text-gray-400 py-3 text-center border-t border-yellow-600">
+        {/* TRUST BADGES */}
+        <div className="flex flex-wrap items-center justify-center gap-6 mt-2 mb-2 text-white/80 text-sm">
+          <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-6 py-2 rounded-full">
+            <span className="text-orange-400">✔</span>
+            Fully Insured
+          </div>
+
+          <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+            <span className="text-orange-400">✔</span>
+            ABN Registered
+          </div>
+
+          <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+            <span className="text-orange-400">✔</span>
+            Perth Based
+          </div>
+        </div>
         <p>© 2026 Bravo Interiors. All Rights Reserved.</p>
       </footer>
     </div>
