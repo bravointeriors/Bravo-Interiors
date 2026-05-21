@@ -219,7 +219,7 @@ export default function PricingCalculator() {
       {/* LEFT SIDE */}
       <div>
 
-        <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
+        <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-4">
           Free Estimate
         </p>
 
@@ -583,7 +583,7 @@ export default function PricingCalculator() {
             {/* SUBMIT BUTTON */}
             <button
               onClick={submitLead}
-              className="w-full mt-8 bg-yellow-500 hover:bg-yellow-400 text-black py-5 rounded-2xl font-bold text-lg transition"
+              className="w-full mt-8 bg-orange-400 hover:bg-orange-300 text-black py-5 rounded-2xl font-bold text-lg transition"
             >
               Submit Request
             </button>
@@ -603,7 +603,7 @@ export default function PricingCalculator() {
           {!showCustomerForm && (
           <button
             onClick={() => setShowCustomerForm(true)}
-            className="w-full mt-8 bg-orange-400 hover:bg-orange-400 text-black py-5 rounded-2xl font-bold text-lg transition"
+            className="w-full mt-8 bg-orange-400 hover:bg-orange-300 text-black py-5 rounded-2xl font-bold text-lg transition"
           >
             Continue
           </button>

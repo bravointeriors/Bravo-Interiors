@@ -174,7 +174,7 @@ const handleSubmit = async (e) => {
       <section id="services" className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-6">
+            <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-6">
               Our Services
             </p>
 
@@ -291,7 +291,7 @@ const handleSubmit = async (e) => {
       <section id="gallery" className="hidden py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
+            <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-4">
               Recent Projects
             </p>
             <h2 className="text-5xl font-bold">Our Work</h2>
@@ -339,7 +339,7 @@ const handleSubmit = async (e) => {
       {/*Testimonials*/}
       <section className="py-24 bg-gray-100">
   <div className="max-w-7xl mx-auto px-6 text-center">
-    <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-4">
+    <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-6">
       Testimonials
     </p>
 
