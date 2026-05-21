@@ -2,7 +2,7 @@ export default function PoliciesPage() {
   return (
     <main className="min-h-screen bg-white text-black">
       <section className="bg-black text-white py-24 text-center">
-        <p className="text-red-600 uppercase tracking-[0.3em] text-sm mb-4">
+        <p className="text-orange-400 uppercase tracking-[0.3em] text-sm mb-4">
           Bravo Interiors
         </p>
 
