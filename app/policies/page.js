@@ -216,7 +216,7 @@ function List({ items }) {
     <ul className="mt-4 space-y-3 text-gray-700">
       {items.map((item, index) => (
         <li key={index} className="flex gap-3">
-          <span className="text-red-600 font-bold">•</span>
+          <span className="text-orange-400 font-bold">•</span>
           <span>{item}</span>
         </li>
       ))}
