@@ -138,7 +138,7 @@ export default function PoliciesPage() {
 
           <div className="mt-6 bg-gray-100 rounded-2xl p-6">
             <p><strong>Phone:</strong> 0435 767 933</p>
-            <p><strong>Email:</strong> bravo.interiors.au@gmail.com</p>
+            <p><strong>Email:</strong> contact@bravointeriors.com.au</p>
             <p><strong>Website:</strong> Bravo Interiors</p>
           </div>
         </PolicySection>
@@ -194,8 +194,8 @@ export default function PoliciesPage() {
           <p className="text-gray-300 mb-4">
             Commercial Flooring & Interior Fit-Out Specialists
           </p>
-          <p>Phone: 0435 767 933</p>
-          <p>Email: bravo.interiors.au@gmail.com</p>
+          <p>Phone: 0404 255 165</p>
+          <p>Email: contact@bravointeriors.com.au</p>
         </div>
       </section>
     </main>

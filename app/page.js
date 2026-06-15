@@ -383,7 +383,7 @@ const handleSubmit = async (e) => {
             </h2>
 
             <div className="space-y-6 text-lg text-gray-700">
-              <p>✉️ Bravo.interiors.au@gmail.com</p>
+              <p>✉️ contact@bravointeriors.com.au</p>
               <p>📍 Servicing Residential & Commercial Projects Across Western Australia</p>
             </div>
           </div>
